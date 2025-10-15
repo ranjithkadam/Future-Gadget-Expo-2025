@@ -194,10 +194,13 @@ body {
 }
 
 #header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30%;
-  text-align: center;
-  /* flex-grow: 1; */
+  flex-grow: 1;
 }
+
 
 .logo h3 {
   color: var(--color-primary);
@@ -224,7 +227,7 @@ body {
   flex-grow: 1;
 }
 
-@media (max-width:780px) {
+@media (max-width:480px) {
 
   #header,
   .list-of-pages {
@@ -232,7 +235,8 @@ body {
   }
 }
 
-.list-of-pages a:hover {
+.list-of-pages a:hover,
+#header>.logo>a {
   color: var(--color-primary);
   transform: none;
   box-shadow: none;
@@ -297,6 +301,7 @@ body {
   background-color: var(--color-primary-dark);
   color: var(--color-text-inverse);
   border-color: var(--color-primary-dark);
+  transition: .3s linear;
 }
 
 
@@ -314,6 +319,7 @@ body {
   animation: animation 0.5s linear;
 }
 
+/* Hero-section Animation */
 @keyframes animation {
   from {
     transform: translateY(10px);
@@ -372,14 +378,32 @@ hr {
 }
 
 .body>.cards,
-.schedule-preview {
+.schedule-preview,
+.speakers-cards {
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   gap: var(--spacing-8);
   margin: var(--spacing-20);
   margin-top: var(--spacing-1);
+}
+
+/* best cards arrange */
+.event-cards>.event-card,
+.speakers-cards>.speaker1,
+.speakers-cards>.speaker2,
+.cards>.our-mission,
+.expect-cards>.card,
+.our-team>.cards>.card,
+.event-location>.convention-center {
+  flex-grow: 1;
+  width: 30%;
+}
+
+.by-the-Number>.cards>.card {
+  width: 20%;
+  flex-grow: 1;
 }
 
 /* Cards Styling */
@@ -585,6 +609,7 @@ footer~.lastLine,
 
 .card .card-img {
   margin-left: 35%;
+  margin-right: 35%;
 }
 
 .location-img {
@@ -682,19 +707,19 @@ span {
 
 form {
   margin-left: var(--spacing-20);
-  margin-right: 30%;
+  margin-right: 50%;
 }
 
 .names {
   display: flex;
   justify-content: space-between;
-  gap: var(--spacing-12);
-  margin-right: 20%;
+  /* gap: var(--spacing-6); */
+  margin-right: 10%;
 }
 
 .names input {
   height: var(--spacing-8);
-  width: 250%;
+  width: 130%;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
@@ -704,7 +729,7 @@ form {
 [type="email"],
 select {
   height: var(--spacing-8);
-  width: 115%;
+  width: 100%;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
@@ -742,6 +767,7 @@ select {
 .pay-btn {
   display: flex;
   justify-content: center;
+
 }
 
 .pay {
@@ -750,6 +776,8 @@ select {
   border: none;
   color: var(--color-text-inverse);
   border-radius: var(--radius-lg);
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
 }
 
 .pay-btn+.caption,
@@ -758,7 +786,13 @@ select {
   text-align: center;
 }
 
-.schedule-preview .caption {
+.schedule-preview .caption,
+.speakers-cards>.speaker1>.guest,
+.speakers-cards>.speaker1>.caption,
+.speakers-cards>.speaker1>p,
+.speakers-cards>.speaker2>.guest,
+.speakers-cards>.speaker2>.caption,
+.speakers-cards>.speaker2>p {
   text-align: start;
 }
 
@@ -806,6 +840,7 @@ select {
 
 .card-faq {
   flex-grow: 1;
+  width: 65%;
   flex-basis: content;
   flex-shrink: 1;
   margin-bottom: var(--spacing-3);
@@ -820,7 +855,7 @@ select {
 .gallery-section {
   text-align: center;
   /* padding: var(--spacing-16); */
-  margin:var(--spacing-8) var(--spacing-16); 
+  margin: var(--spacing-8) var(--spacing-16);
 
 }
 
@@ -941,8 +976,7 @@ select {
   border-radius: var(--radius-md);
 }
 
-.spr-card>img:hover,
-.spr-card:hover {
+.spr-card>img:hover {
   transition: none;
   transform: none;
   scale: 1;
@@ -1045,12 +1079,13 @@ select {
 #secondday:checked~.btn label[for="secondday"],
 #thirdday:checked~.btn label[for="thirdday"] {
   color: var(--color-primary-dark);
+  text-decoration: underline;
   font-weight: 600;
 }
 
 #firstday:checked~.gallery2 .day:not(.firstday),
 #secondday:checked~.gallery2 .day:not(.secondday),
-#thirdday:checked~.gallery2 .day:not(.thirdday) { 
+#thirdday:checked~.gallery2 .day:not(.thirdday) {
   display: none;
 }
 
@@ -1058,38 +1093,7 @@ select {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:760px) {
+@media (max-width:426px) {
 
   .cards-get-in-touch,
   footer {
@@ -1106,6 +1110,10 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
+  .event-cards {
+    flex-direction: column;
+    margin: 0;
   }
 }
