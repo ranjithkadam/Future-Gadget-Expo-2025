@@ -412,8 +412,7 @@ hr {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: var(--radius-lg);
   padding: var(--spacing-4);
-  /* flex-grow: 1; */
-}
+ }
 
 .card:hover,
 .card-faq:hover,
@@ -427,7 +426,6 @@ a:hover,
 .featured-speackers {
   background-color: var(--color-bg-secondary);
   padding-top: var(--spacing-4);
-
 }
 
 .featured-speackers .cards,
@@ -493,7 +491,6 @@ footer {
 }
 
 /* Footer Styling */
-
 footer li,
 .card li {
   list-style: none;
@@ -656,7 +653,6 @@ footer~.lastLine,
   padding-bottom: 0;
   padding-right: 0;
   padding-left: 0;
-
 }
 
 .premium-pass li {
@@ -713,7 +709,6 @@ form {
 .names {
   display: flex;
   justify-content: space-between;
-  /* gap: var(--spacing-6); */
   margin-right: 10%;
 }
 
@@ -767,7 +762,6 @@ select {
 .pay-btn {
   display: flex;
   justify-content: center;
-
 }
 
 .pay {
@@ -798,7 +792,6 @@ select {
 
 
 /* Contact Page Style */
-
 .cards-get-in-touch {
   display: flex;
   justify-content: space-evenly;
@@ -851,17 +844,14 @@ select {
 }
 
 /*  Gallery Section*/
-
 .gallery-section {
   text-align: center;
   /* padding: var(--spacing-16); */
   margin: var(--spacing-8) var(--spacing-16);
-
 }
 
 .gallery-section h2 {
   margin-bottom: var(--spacing-4);
-
 }
 
 /* Filter Buttons */
@@ -964,7 +954,6 @@ select {
   }
 }
 
-
 /* Speakers Section css */
 
 .caption-xs {
@@ -1045,7 +1034,6 @@ select {
 }
 
 /* Event Schedule Page Starts */
-
 .even-schedule {
   margin: var(--spacing-16);
 }
@@ -1057,7 +1045,6 @@ select {
   flex-wrap: wrap;
   margin: auto var(--spacing-20);
 }
-
 
 .first-cards>h6 {
   color: var(--color-primary-dark);
@@ -1088,10 +1075,6 @@ select {
 #thirdday:checked~.gallery2 .day:not(.thirdday) {
   display: none;
 }
-
-
-
-
 
 @media (max-width:426px) {
 
