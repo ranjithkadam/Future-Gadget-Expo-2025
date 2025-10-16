@@ -420,7 +420,7 @@ hr {
 a:hover,
 .card-touch:hover {
   transform: translateY(-3px);
-  transition: all .5s linear;
+  transition: all 0.3s linear;
   box-shadow: var(--shadow-xl);
 }
 
@@ -914,7 +914,7 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 /* Hover effect */
@@ -931,7 +931,7 @@ select {
   color: var(--color-bg-primary);
   padding: var(--spacing-2);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
 .card:hover .overlay {
