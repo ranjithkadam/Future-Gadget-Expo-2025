@@ -259,6 +259,23 @@ body {
   text-align: center;
 }
 
+.get-your-tickets, .explore-event{
+  animation: animation2 .3s linear;
+}
+
+@keyframes animation2{
+  from{
+  position: relative; 
+  top: 30px;
+  opacity: 0;
+  }
+  to{
+    position: relative;
+    top:0;
+    opacity: 1;
+  }
+}
+
 .explore-event,
 .learnMore,
 .expand-details {
@@ -267,7 +284,7 @@ body {
   color: var(--color-primary);
   border-radius: var(--radius-lg);
   font-weight: 600;
- }
+}
 
 .active:visited {
   color: var(--color-primary);
@@ -308,16 +325,19 @@ body {
   background-image: var(--gradient-hero);
   padding-top: var(--spacing-12);
   padding-bottom: var(--spacing-12);
- }
+}
 
-.hero-section {
-  animation: animation 0.5s linear;
+/* .hero-section*/
+.header-title,
+.para-caption,
+.para-location{
+  animation: animation 0.3s linear;
 }
 
 /* Hero-section Animation */
 @keyframes animation {
   from {
-    transform: translateY(10px);
+    transform: translateY(20px);
     opacity: 0;
   }
 
@@ -407,7 +427,7 @@ hr {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: var(--radius-lg);
   padding: var(--spacing-4);
- }
+}
 
 .card:hover,
 .card-faq:hover,
@@ -515,10 +535,10 @@ footer~.lastLine,
   justify-content: center;
   align-items: center;
   position: relative;
-  left:1345px;
+   left:95%;
   border-radius: 50%;
   font-weight: bold;
-  margin-top:-42px ;
+  margin-top: -42px;
 }
 
 /* About Page Start */
@@ -1094,3 +1114,7 @@ select {
     margin: 0;
   }
 }
+
+
+
+ 
